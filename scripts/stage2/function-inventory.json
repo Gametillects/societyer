@@ -8263,6 +8263,208 @@
     ]
   },
   {
+    "key": "convex:documentSources:browse",
+    "surface": "convex",
+    "name": "documentSources:browse",
+    "kind": "action",
+    "access": "authenticated",
+    "source": "convex/documentSources.ts",
+    "idArguments": [
+      {
+        "path": "societyId",
+        "table": "societies",
+        "array": false,
+        "optional": false
+      },
+      {
+        "path": "sourceId",
+        "table": "documentSources",
+        "array": false,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "key": "convex:documentSources:commitLink",
+    "surface": "convex",
+    "name": "documentSources:commitLink",
+    "kind": "mutation",
+    "access": "service",
+    "source": "convex/documentSources.ts",
+    "idArguments": [
+      {
+        "path": "societyId",
+        "table": "societies",
+        "array": false,
+        "optional": false
+      },
+      {
+        "path": "sourceId",
+        "table": "documentSources",
+        "array": false,
+        "optional": false
+      },
+      {
+        "path": "actorUserId",
+        "table": "users",
+        "array": false,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "key": "convex:documentSources:link",
+    "surface": "convex",
+    "name": "documentSources:link",
+    "kind": "action",
+    "access": "authenticated",
+    "source": "convex/documentSources.ts",
+    "idArguments": [
+      {
+        "path": "societyId",
+        "table": "societies",
+        "array": false,
+        "optional": false
+      },
+      {
+        "path": "sourceId",
+        "table": "documentSources",
+        "array": false,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "key": "convex:documentSources:list",
+    "surface": "convex",
+    "name": "documentSources:list",
+    "kind": "query",
+    "access": "authenticated",
+    "source": "convex/documentSources.ts",
+    "idArguments": [
+      {
+        "path": "societyId",
+        "table": "societies",
+        "array": false,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "key": "convex:documentSources:resolve",
+    "surface": "convex",
+    "name": "documentSources:resolve",
+    "kind": "action",
+    "access": "authenticated",
+    "source": "convex/documentSources.ts",
+    "idArguments": [
+      {
+        "path": "documentId",
+        "table": "documents",
+        "array": false,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "key": "convex:documentSources:resolveContext",
+    "surface": "convex",
+    "name": "documentSources:resolveContext",
+    "kind": "query",
+    "access": "service",
+    "source": "convex/documentSources.ts",
+    "idArguments": [
+      {
+        "path": "documentId",
+        "table": "documents",
+        "array": false,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "key": "convex:documentSources:save",
+    "surface": "convex",
+    "name": "documentSources:save",
+    "kind": "mutation",
+    "access": "authenticated",
+    "source": "convex/documentSources.ts",
+    "idArguments": [
+      {
+        "path": "societyId",
+        "table": "societies",
+        "array": false,
+        "optional": false
+      },
+      {
+        "path": "sourceId",
+        "table": "documentSources",
+        "array": false,
+        "optional": true
+      }
+    ]
+  },
+  {
+    "key": "convex:documentSources:setEnabled",
+    "surface": "convex",
+    "name": "documentSources:setEnabled",
+    "kind": "mutation",
+    "access": "authenticated",
+    "source": "convex/documentSources.ts",
+    "idArguments": [
+      {
+        "path": "societyId",
+        "table": "societies",
+        "array": false,
+        "optional": false
+      },
+      {
+        "path": "sourceId",
+        "table": "documentSources",
+        "array": false,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "key": "convex:documentSources:sourceContext",
+    "surface": "convex",
+    "name": "documentSources:sourceContext",
+    "kind": "query",
+    "access": "service",
+    "source": "convex/documentSources.ts",
+    "idArguments": [
+      {
+        "path": "societyId",
+        "table": "societies",
+        "array": false,
+        "optional": false
+      },
+      {
+        "path": "sourceId",
+        "table": "documentSources",
+        "array": false,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "key": "convex:documentSources:unlink",
+    "surface": "convex",
+    "name": "documentSources:unlink",
+    "kind": "mutation",
+    "access": "authenticated",
+    "source": "convex/documentSources.ts",
+    "idArguments": [
+      {
+        "path": "documentId",
+        "table": "documents",
+        "array": false,
+        "optional": false
+      }
+    ]
+  },
+  {
     "key": "convex:documentVersions:allocateUploadHandle",
     "surface": "convex",
     "name": "documentVersions:allocateUploadHandle",
@@ -36087,6 +36289,82 @@
     "idArguments": [
       {
         "path": "id",
+        "table": "documents",
+        "array": false,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "key": "portable:documentSources:list",
+    "surface": "portable",
+    "name": "documentSources:list",
+    "kind": "query",
+    "access": "authenticated",
+    "source": "shared/functions/registry.ts",
+    "idArguments": [
+      {
+        "path": "societyId",
+        "table": "societies",
+        "array": false,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "key": "portable:documentSources:save",
+    "surface": "portable",
+    "name": "documentSources:save",
+    "kind": "mutation",
+    "access": "authenticated",
+    "source": "shared/functions/registry.ts",
+    "idArguments": [
+      {
+        "path": "societyId",
+        "table": "societies",
+        "array": false,
+        "optional": false
+      },
+      {
+        "path": "sourceId",
+        "table": "documentSources",
+        "array": false,
+        "optional": true
+      }
+    ]
+  },
+  {
+    "key": "portable:documentSources:setEnabled",
+    "surface": "portable",
+    "name": "documentSources:setEnabled",
+    "kind": "mutation",
+    "access": "authenticated",
+    "source": "shared/functions/registry.ts",
+    "idArguments": [
+      {
+        "path": "societyId",
+        "table": "societies",
+        "array": false,
+        "optional": false
+      },
+      {
+        "path": "sourceId",
+        "table": "documentSources",
+        "array": false,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "key": "portable:documentSources:unlink",
+    "surface": "portable",
+    "name": "documentSources:unlink",
+    "kind": "mutation",
+    "access": "authenticated",
+    "source": "shared/functions/registry.ts",
+    "idArguments": [
+      {
+        "path": "documentId",
         "table": "documents",
         "array": false,
         "optional": false
